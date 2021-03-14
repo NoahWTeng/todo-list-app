@@ -21,8 +21,9 @@ border-radius: ${(props) => props.radius};
 padding: ${(props) => props.padding};
 margin: ${(props) => props.margin};
 
-
-
+max-width: ${(props) => props.maxWidth && props.maxWidth};
+width: ${(props) => props.width && props.width};
+text-align: ${(props) => props.center && 'center'}
 
 
 ${

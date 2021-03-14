@@ -1,5 +1,0 @@
-const FETCH_PHOTOS_PROCESS = '[PHOTOS] [get] [process]';
-const FETCH_PHOTOS_SUCCESS = '[PHOTOS] [get] [success]';
-const FETCH_PHOTOS_ERROR = '[PHOTOS] [get] [error]';
-
-export { FETCH_PHOTOS_PROCESS, FETCH_PHOTOS_SUCCESS, FETCH_PHOTOS_ERROR };

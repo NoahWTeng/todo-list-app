@@ -45,7 +45,6 @@ src: url("../assets/fonts/AvenirNextLTPro-UltLtCn.otf"); */
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  line-height: var(--base * 1.4);
 }
 
 body {
@@ -55,9 +54,4 @@ body {
   font-size: var(--base);
   letter-spacing: var(--base--spacing);
   font-weight: var(--base-weight);
-}
-
-#__next{
-  height: 100%;
-  width: 100%;
 }
