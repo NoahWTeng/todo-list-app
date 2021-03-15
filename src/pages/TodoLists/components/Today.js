@@ -1,11 +1,11 @@
-import React from 'react';
-import { Block, Text } from '../../../theme/components';
+import React, { useState } from 'react';
+import { Block, Text, Input } from '../../../theme/components';
 
 const middle = {
-  color: '#9b9b9b',
   padding: '1em',
   display: 'grid',
-  gridRowTemplate: '100px 150px auto',
+  gridRowTemplate: '50px 100px auto',
+  rowGap: '1em',
 };
 
 const title = {
@@ -13,16 +13,38 @@ const title = {
   textAlign: 'center',
 };
 
+const task = {
+  width: '100%',
+  textAlign: 'center',
+  display: 'flex',
+};
+
 export function Today({ day }) {
+  const [tasks, changeTasks] = useState([{}]);
+
+  const handleSubmit = (event) => {
+    console.log('[ submit ] >', event.target.name.value);
+    event.preventDefault();
+  };
+
   return (
     <Block {...middle}>
       <Block {...title}>
         <Text h4>Today</Text>
         <Text subtitle>{day.format('DD-MM-YYYY')}</Text>
       </Block>
-      <Block {...title}>
-        <Text h4>Today</Text>
-        <Text subtitle>{day.format('DD-MM-YYYY')}</Text>
+      <Block {...task} middle center>
+        <form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            width="20em"
+            height="2em"
+            padding="0.2em"
+            name="name"
+            placeholder="Task title"
+          />
+          <Input type="submit" width="5em" height="2em" value="Add" />
+        </form>
       </Block>
       <Block {...title}>
         <Text h4>Today</Text>

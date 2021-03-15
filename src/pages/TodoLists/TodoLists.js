@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 
 import { Block, Text } from '../../theme/components';
-import { Header, Today } from './components';
+import { Header, Today, Yesterday, Tomorrow } from './components';
 
 const container = {
   display: 'grid',
@@ -14,8 +14,6 @@ const container = {
   padding: '1em',
 };
 
-const left = {};
-
 const right = {};
 
 export function TodoLists() {
@@ -24,9 +22,9 @@ export function TodoLists() {
   return (
     <Block {...container}>
       <Header />
-      <Block {...left}>One</Block>
+      <Yesterday day={today} />
       <Today day={today} />
-      <Block {...right}>three</Block>
+      <Tomorrow day={today} />
     </Block>
   );
 }
